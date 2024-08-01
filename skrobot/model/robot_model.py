@@ -916,8 +916,8 @@ class CascadedLink(CascadedCoords):
         if not isinstance(link_list[0], list):
             link_list = [link_list]
         move_target = listify(move_target)
-        rotation_axis = listify(rotation_axis)
-        translation_axis = listify(translation_axis)
+        rotation_axis = listify(rotation_axis, n=len(move_target))
+        translation_axis = listify(translation_axis, n=len(move_target))
         thre = listify(thre)
         rthre = listify(rthre)
 
